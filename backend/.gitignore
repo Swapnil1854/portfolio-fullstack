@@ -1,0 +1,23 @@
+# Application properties (contains credentials)
+src/main/resources/application.properties
+
+# Maven
+target/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Frontend dependencies
+frontend/node_modules/
+
+# Frontend build
+frontend/dist/
+
+# Environment variables
+frontend/.env
+frontend/.env.local
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,73 @@
+.certs {
+  background: linear-gradient(180deg, rgba(255, 0, 110, 0.03), transparent);
+}
+
+.certsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.certCard {
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: visible;           /* fix: let card grow vertically */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.certCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), transparent);
+  border-radius: 50%;
+  transform: translate(30px, -30px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+  clip-path: inset(0 0 0 0 round 12px); /* keeps decoration inside card visually */
+}
+
+.certCard:hover::after { transform: translate(10px, -10px); }
+
+.certCard:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.2);
+}
+
+.certIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.certCard h3 {
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+  font-family: 'Space Mono', monospace;
+  word-wrap: break-word;       /* fix: long titles wrap too */
+  overflow-wrap: break-word;
+}
+
+.certCard p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.certDesc {
+  font-size: 0.85rem !important;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .certsGrid { grid-template-columns: 1fr; }
+}
