@@ -7,6 +7,5 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
-COPY application.properties application.properties
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar", "--spring.config.location=application.properties"]
+ENTRYPOINT ["java", "-jar", "app.jar", "--spring.config.location=/etc/secrets/application.properties"]
