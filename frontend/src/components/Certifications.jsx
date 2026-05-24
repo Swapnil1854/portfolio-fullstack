@@ -8,7 +8,7 @@ export default function Certifications() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/certifications')
+   fetch('https://portfolio-fullstack-w1z9.onrender.com/api/certifications')
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch certifications')
         return res.json()

@@ -8,7 +8,7 @@ export default function Skills() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/skills')
+    fetch('https://portfolio-fullstack-w1z9.onrender.com/api/skills')
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch skills')
         return res.json()

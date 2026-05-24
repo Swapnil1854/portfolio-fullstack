@@ -7,7 +7,7 @@ export default function Experience() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/experience')
+    fetch('https://portfolio-fullstack-w1z9.onrender.com/api/experience')
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch experience')
         return res.json()
