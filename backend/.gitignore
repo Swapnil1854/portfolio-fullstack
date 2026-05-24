@@ -1,5 +1,4 @@
-# Application properties (contains credentials)
-src/main/resources/application.properties
+
 
 # Maven
 target/
