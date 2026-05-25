@@ -6,7 +6,7 @@ A full-stack personal portfolio website with a secure admin panel to manage all 
 
 ## 🌐 Live Demo
 
-> Coming soon after deployment
+https://swapnil-kadam.vercel.app
 
 ---
 
